@@ -5,6 +5,7 @@ class BinaryMinHeap
 
   def initialize(&prc)
     @store = Array.new
+    @length = 0
   end
 
   def count
