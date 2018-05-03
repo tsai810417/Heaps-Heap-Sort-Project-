@@ -79,7 +79,6 @@ class BinaryMinHeap
     prc ||= Proc.new{ |a,b| a <=> b }
     unless child_idx == 0
     parent_idx = self.parent_index(child_idx)
-    debugger
       if prc.call(array[parent_idx], array[child_idx]) > 0
         self.swap(array, parent_idx, child_idx)
         array = self.heapify_up(array, parent_idx, len, &prc)
