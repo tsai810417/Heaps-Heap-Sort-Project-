@@ -2,6 +2,7 @@ class BinaryMinHeap
   attr_reader :store, :prc
 
   def initialize(&prc)
+    @store = Array.new
   end
 
   def count
