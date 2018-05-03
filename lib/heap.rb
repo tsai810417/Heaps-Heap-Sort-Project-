@@ -1,7 +1,7 @@
 require 'byebug'
 
 class BinaryMinHeap
-  attr_reader :store, :prc
+  attr_reader :store, :prc, :length
 
   def initialize(&prc)
     prc ||= Proc.new{ |a,b| a <=> b }
