@@ -22,6 +22,9 @@ class BinaryMinHeap
   end
 
   def push(val)
+    @store.push(val)
+    @length += 1
+    BinaryMinHeap.heapify_up(@store, @length - 1, @length)
   end
 
   public
