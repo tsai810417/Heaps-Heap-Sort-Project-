@@ -30,6 +30,11 @@ class BinaryMinHeap
   end
 
   def self.parent_index(child_index)
+    if child_index != 0
+      (child_index - 1) / 2
+    else
+      raise "root has no parent"
+    end
   end
 
   def self.heapify_down(array, parent_idx, len = array.length, &prc)
