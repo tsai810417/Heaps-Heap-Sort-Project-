@@ -12,6 +12,10 @@ class BinaryMinHeap
   end
 
   def extract
+    BinaryMinHeap.swap(@store, 0, @length - 1)
+    BinaryMinHeap.heapify_down(@store, 0, @length - 1)
+    @length -= 1
+    @store.pop
   end
 
   def peek
